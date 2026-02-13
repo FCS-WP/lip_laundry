@@ -1,0 +1,29 @@
+.header-main {
+  height: 120px !important;
+  background-color: #ffffff !important;
+}
+
+.nav-right {
+  gap: 20px;
+}
+
+.menu-item {
+  a {
+    color: $primary-color !important;
+  }
+}
+
+.icon-search {
+  color: $primary-color !important;
+}
+
+.cart-item {
+  a {
+    color: $primary-color !important;
+  }
+}
+.header-search {
+  a {
+    margin-left: 30px;
+  }
+}
