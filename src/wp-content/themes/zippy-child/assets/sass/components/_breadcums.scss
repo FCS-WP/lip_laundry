@@ -1,0 +1,35 @@
+.zippy-breadcrumb {
+  display: block;
+  width: 100%;
+  padding: 0 20px 20px;
+  text-align: center;
+  font-weight: 500;
+  line-height: 1.2;
+  color: $secondary-color; // Set base color to $secondary-color for the current page text
+
+  a {
+    color: $primary-color;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-bottom: none !important;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+
+  .divider {
+    color: $primary-color;
+    margin: 0 10px;
+    font-weight: normal;
+    display: inline-block;
+  }
+}
+
+// Mobile responsiveness
+@media (max-width: 768px) {
+  .zippy-breadcrumb {
+    font-size: 18px;
+    padding: 25px 0;
+  }
+}

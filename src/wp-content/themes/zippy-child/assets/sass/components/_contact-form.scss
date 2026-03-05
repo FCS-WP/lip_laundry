@@ -1,0 +1,118 @@
+@import "../mixins";
+
+// =============================================
+// Contact/Enquiry Form Styles
+// =============================================
+
+.contact-form-wrapper {
+  background: #ffffff;
+  border: 1.5px solid #e8e8e8;
+  border-radius: 24px;
+  padding: 30px;
+  box-shadow: 0 10px 40px rgba(0, 63, 168, 0.05);
+  max-width: 900px;
+  margin: 40px auto;
+
+  @include tablet {
+    padding: 50px;
+  }
+
+  .contact-form-title {
+    text-align: center;
+    color: $primary-color;
+    margin-bottom: 40px;
+    font-weight: 800;
+  }
+
+  .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+
+    .form-group {
+      flex: 1;
+      min-width: 250px;
+      margin-bottom: 0;
+    }
+  }
+
+  .form-group {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    label {
+      font-size: 14px;
+      font-weight: 700;
+      color: #333;
+
+      .required {
+        color: $secondary-color;
+      }
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 14px 20px;
+      background: #f8faff;
+      border: 1.5px solid #e1e9f5;
+      border-radius: 12px;
+      font-size: 15px;
+      color: #333;
+      transition: all 0.3s ease;
+      outline: none;
+
+      &::placeholder {
+        color: #aaa;
+      }
+
+      &:focus {
+        border-color: $primary-color;
+        background: #fff;
+        box-shadow: 0 4px 15px rgba(0, 63, 168, 0.08);
+      }
+    }
+
+    textarea {
+      resize: vertical;
+    }
+  }
+
+  .form-submit {
+    text-align: center;
+    margin-top: 10px;
+
+    .zippy-btn-submit {
+      background-color: $secondary-color !important;
+      border-radius: 10px !important;
+      color: #fff !important;
+
+      &:hover {
+        background-color: darken($secondary-color, 10%) !important;
+      }
+    }
+  }
+
+  .form-response {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 14px;
+
+    &.success {
+      background: #e7f7ed;
+      color: #1e7e34;
+      border: 1px solid #c3e6cb;
+    }
+
+    &.error {
+      background: #fdf2f2;
+      color: #c53030;
+      border: 1px solid #fed7d7;
+    }
+  }
+}

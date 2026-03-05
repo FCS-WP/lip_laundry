@@ -1,58 +1,129 @@
 .container-service-homepage {
   display: flex;
   flex-wrap: wrap;
-  gap: 25px;
-  max-width: 100% !important;
-  padding-left: 30px !important;
-  padding-right: 30px !important;
-  @include desktop {
-    padding-left: 100px !important;
-    padding-right: 100px !important;
+  gap: 24px;
+  max-width: 1240px !important;
+  margin: 0 auto !important;
+  padding: 20px 15px !important;
+
+  @include tablet {
+    padding: 40px 20px !important;
   }
 
   .card-service {
     padding: 0 !important;
-    flex: 1 1 calc(25% - 19px);
-    max-width: calc(25% - 19px);
+    flex: 1 1 calc(25% - 18px);
+    max-width: calc(25% - 18px);
+    display: flex;
   }
 
   .col-inner {
     background: #e9f6fe;
+    border: none;
     border-radius: 24px;
+    padding: 0;
     overflow: hidden;
-    padding-bottom: 25px;
+    display: flex;
+    flex-direction: column;
     height: 100%;
-    transition: all 0.3s ease;
-  }
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+    width: 100%;
 
-  .col-inner:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
-  }
-
-  .img-inner {
-    img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      border-radius: 24px;
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 40px rgba(0, 63, 168, 0.1);
     }
   }
 
+  .img-inner {
+    width: 100%;
+    box-sizing: border-box;
+
+    img {
+      width: 100%;
+      aspect-ratio: 16/10; // Maintain ratio on the image itself
+      object-fit: cover;
+      border-radius: 24px; // Round all 4 corners as per mockup
+      transition: transform 0.5s ease;
+      display: block;
+    }
+  }
+
+  .col-inner:hover .img-inner img {
+    transform: scale(1.08);
+  }
+
   h2 {
-    font-size: 18px;
-    font-weight: 600;
-    color: #0f4c81;
-    padding: 20px 20px 10px 20px;
+    font-size: 18px !important; // Smaller font size as requested
+    font-weight: 700;
+    color: #2b59a2;
+    padding: 20px 24px 8px;
     margin: 0;
+    line-height: 1.3;
+    min-height: 65px; // Reduced height but enough for 2 lines
+    display: flex;
+    align-items: flex-start; // Align to top for better look with single line
   }
 
   .text {
-    padding: 0 20px;
+    padding: 0 24px 15px;
+    display: flex;
+    flex-direction: column;
+
+    // Only grow the description text area, not the button area
+    &:not(.button-redirect) {
+      flex-grow: 1;
+    }
+
     p {
-      font-size: 14px;
-      line-height: 1.6;
+      line-height: 1.5;
       color: #333;
+      margin: 0;
+      word-wrap: break-word;
+    }
+  }
+
+  .button-redirect {
+    padding: 0 24px 25px !important;
+    margin-top: auto;
+
+    p {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      color: $secondary-color;
+      margin: 0;
+      cursor: pointer;
+      position: relative;
+      transition: color 0.3s;
+
+      &::after {
+        content: "→";
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+        background-color: $secondary-color;
+        color: #fff;
+        border-radius: 50%;
+        font-size: 14px;
+        font-weight: bold;
+        transition:
+          transform 0.3s,
+          background-color 0.3s;
+      }
+
+      &:hover {
+        color: darken($secondary-color, 10%);
+        &::after {
+          transform: translateX(4px);
+          background-color: darken($secondary-color, 10%);
+        }
+      }
     }
   }
 }

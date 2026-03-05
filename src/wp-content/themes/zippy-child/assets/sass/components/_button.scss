@@ -8,3 +8,51 @@
   color: $secondary-color !important;
   border-radius: 10px !important;
 }
+
+// =============================================
+// WooCommerce Core & Block Buttons
+// =============================================
+
+// Single Product Page Add to Cart
+.single_add_to_cart_button,
+.wc-block-cart__submit-button,
+.wc-block-components-checkout-place-order-button,
+.wc-block-components-button {
+  background-color: $secondary-color !important;
+  color: #ffffff !important;
+  border-radius: 10px !important;
+  border: none !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  transition: all 0.3s ease !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 4px 15px rgba(180, 16, 95, 0.2) !important;
+
+  span {
+    color: inherit !important;
+  }
+
+  &:hover {
+    background-color: darken($secondary-color, 10%) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 25px rgba(180, 16, 95, 0.3) !important;
+    color: #ffffff !important;
+  }
+
+  &:active {
+    transform: translateY(-1px) !important;
+  }
+}
+
+// Cart Submit/Checkout button wrapper (WooBlocks)
+.wc-block-cart__submit-container,
+.wc-block-checkout__actions_row {
+  margin-top: 20px;
+
+  .wc-block-components-button {
+    width: 100% !important; // Make them full width in these contexts
+  }
+}
