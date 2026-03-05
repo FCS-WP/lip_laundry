@@ -1,9 +1,21 @@
 // // @import './fonts/fonts';
 @import "./mixins";
+@import "./base";
+
 @import "./components/header";
 @import "./components/button";
 @import "./components/footer";
 @import "./pages/home-page";
+@import "./components/breadcums";
+@import "./components/service-slider";
+@import "./components/mini-cart";
+@import "./components/blog-layout";
+@import "./components/contact-form";
+@import "./components/woocommerce";
+
+@import "./pages/corporate-laundry";
+@import "./pages/shop-page";
+@import "./pages/contact-page";
 
 .pb-0 {
   padding-bottom: 0 !important;
@@ -17,4 +29,35 @@
   a {
     border-bottom-style: none !important;
   }
+}
+
+.img-rounded {
+  img {
+    border-radius: 50%;
+  }
+}
+
+.img-rounded-20 {
+  img {
+    border-radius: 20px;
+  }
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.p-0 {
+  padding: 0 !important;
+}
+
+.p-6 {
+  padding: 24px !important;
+}
+
+.border-radius-20 {
+  border: 1.5px solid #e8e8e8;
+  border-radius: 20px;
 }
