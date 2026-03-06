@@ -1,12 +1,32 @@
 .btn-custom {
   background-color: $secondary-color !important;
   border-radius: 10px !important;
+  font-size: 12px !important;
+
+  span {
+    font-size: inherit !important;
+    color: inherit !important;
+  }
+
+  @include tablet {
+    font-size: 14px !important;
+  }
 }
 
 .secondary-btn-custom {
   background-color: white !important;
   color: $secondary-color !important;
   border-radius: 10px !important;
+  font-size: 12px !important;
+
+  span {
+    font-size: inherit !important;
+    color: inherit !important;
+  }
+
+  @include tablet {
+    font-size: 14px !important;
+  }
 }
 
 // =============================================

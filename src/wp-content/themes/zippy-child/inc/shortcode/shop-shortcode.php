@@ -75,7 +75,7 @@ if (! function_exists('zippy_shop_layout_shortcode')) {
                 <!-- Sidebar -->
                 <aside class="zippy-shop-sidebar">
                     <div class="zippy-shop-widget">
-                        <h3>LEFT SIDEBAR FILTERS</h3>
+                        <h3>FILTERS</h3>
 
                         <div style="margin-top: 20px;">
                             <strong style="display: block; font-size: 14px; margin-bottom: 10px; color: #000;">CATEGORIES</strong>
@@ -114,7 +114,7 @@ if (! function_exists('zippy_shop_layout_shortcode')) {
                 <main class="zippy-shop-main">
                     <div class="zippy-shop-toolbar">
                         <div class="zippy-shop-result-count">
-                            TOP FILTER BAR — Showing <?php echo $query->post_count; ?> of <?php echo $query->found_posts; ?> results
+                            Showing <?php echo $query->post_count; ?> of <?php echo $query->found_posts; ?> results
                         </div>
                         <div class="zippy-shop-ordering">
                             <form method="get" id="zippy-shop-sort-form">
