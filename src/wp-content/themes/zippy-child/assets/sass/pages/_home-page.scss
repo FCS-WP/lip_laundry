@@ -185,18 +185,24 @@
     }
 
     .img-inner {
-      width: 52px !important;
-      height: 52px !important;
+      width: 60px !important;
+      height: 60px !important;
       border-radius: 50% !important;
       overflow: hidden !important;
       flex-shrink: 0 !important;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      background-color: $primary-color !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 
       img {
         width: 100% !important;
         height: 100% !important;
-        object-fit: cover !important;
+        padding: 12px !important;
+        object-fit: contain !important;
         display: block !important;
+        filter: brightness(0) invert(1);
       }
     }
   }
