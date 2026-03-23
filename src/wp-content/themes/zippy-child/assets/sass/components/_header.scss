@@ -1,6 +1,6 @@
 .header-main {
   height: 120px !important;
-  background-color: #ffffff !important;
+  background-color: $primary-color !important;
 }
 
 .nav-right {
@@ -10,18 +10,18 @@
 .header {
   .menu-item {
     a {
-      color: $primary-color !important;
+      color: #ffffff !important;
     }
   }
 }
 
 .icon-search {
-  color: $primary-color !important;
+  color: #ffffff !important;
 }
 
 .cart-item {
   a {
-    color: $primary-color !important;
+    color: #ffffff !important;
   }
 }
 .header-search {
